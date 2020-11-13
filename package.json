@@ -1,0 +1,23 @@
+{
+  "name": "dummy-app-node",
+  "version": "0.0.1",
+  "description": "Test app",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silverstorm/dummy-app-node.git"
+  },
+  "author": "",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/silverstorm/dummy-app-node/issues"
+  },
+  "homepage": "https://github.com/silverstorm/dummy-app-node#readme"
+}
