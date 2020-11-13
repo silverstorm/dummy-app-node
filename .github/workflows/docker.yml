@@ -20,7 +20,7 @@ jobs:
       - name: Prepare
         id: prep
         run: |
-          DOCKER_IMAGE=silverstorm/dummy-app-node/dummy-app-node
+          DOCKER_IMAGE=silverstorm/dummy-app-node
           VERSION=edge
           if [[ $GITHUB_REF == refs/tags/* ]]; then
             VERSION=${GITHUB_REF#refs/tags/}
@@ -38,7 +38,7 @@ jobs:
       - name: Login to GitHub Packages Docker registry
         uses: docker/login-action@v1 
         with:
-          registry: docker.pkg.github.com
+          registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.CR_PAT }}
       - name: Build and push
@@ -48,4 +48,5 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
-          tag: silverstorm/dummy-app-node:{{ $TAG }}
+          tag: ${{ DOCKER_IMAGE }}:${{ TAG }}
+
