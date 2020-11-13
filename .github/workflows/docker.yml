@@ -20,7 +20,7 @@ jobs:
       - name: Prepare
         id: prep
         run: |
-          DOCKER_IMAGE= silverstorm/dummy-app-node/dummy-app-node
+          DOCKER_IMAGE=silverstorm/dummy-app-node/dummy-app-node
           VERSION=edge
           if [[ $GITHUB_REF == refs/tags/* ]]; then
             VERSION=${GITHUB_REF#refs/tags/}
