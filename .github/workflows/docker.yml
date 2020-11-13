@@ -51,7 +51,6 @@ jobs:
         with:
           context: .
           platforms: linux/amd64
-          push: true
           file: ./Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.prep.outputs.tags }}
